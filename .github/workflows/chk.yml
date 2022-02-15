@@ -1,0 +1,7 @@
+name: The checker
+on: [push]
+jobs:
+  The-Check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checking......"
