@@ -1,10 +1,37 @@
 <html>
   <script type="module">
-    import {GUI} from "./snow.js";
+    import {GUI} from "./snow.module.js";
     var gui;
     function init(){
       gui=new GUI([
+        {"add":"button",
+          "text":"Hello"
+        },
+        {
+          "add":"text",
+          "text":"also hello"
+        },
+        {
+          "add":"container",
+          "children":[
+            {"add":"button",
+            "text":"Hello in div"
+            },
+            {
+              "add":"container",
+              "children":[
+                {"add":"text",
+                "text":"Hello in div in div"
+                }
+              ]
+            },
+            {"add":"button",
+            "text":"Hello in div 2"
+            }
+          ]
+        }
       ]);
+      document.body.appendChild(gui.getDomElement());
     }
     document.addEventListener("DOMContentLoaded",init);
   </script>
