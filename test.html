@@ -4,31 +4,16 @@
     var gui;
     function init(){
       gui=new GUI([
-        {"add":"button",
-          "text":"Hello"
-        },
-        {
-          "add":"text",
-          "text":"also hello"
-        },
-        {
-          "add":"container",
+        {"add":"window",
           "children":[
-            {"add":"button",
-            "text":"Hello in div"
-            },
             {
-              "add":"container",
-              "children":[
-                {"add":"text",
-                "text":"Hello in div in div"
-                }
-              ]
-            },
-            {"add":"button",
-            "text":"Hello in div 2"
+              "add":"text",
+              "text":"Windowed text"
             }
-          ]
+          ],
+          "x":200,
+          "y":200,
+          "flip":true
         }
       ]);
       document.body.appendChild(gui.getDomElement());
