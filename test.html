@@ -1,25 +1,24 @@
 <html>
-  <script type="module">
-    import {GUI} from "./snow.module.js";
-    var gui;
-    function init(){
-      gui=new GUI([
-        {"add":"window",
-          "children":[
-            {
-              "add":"text",
-              "text":"Windowed text"
-            }
-          ],
-          "x":200,
-          "y":200,
-          "flip":true
-        }
-      ]);
-      document.body.appendChild(gui.getDomElement());
-    }
-    document.addEventListener("DOMContentLoaded",init);
-  </script>
-  <body>
-  </body>
+	<script type="module">
+		import {GUI} from "./snow.module.js";
+		var gui;
+		function init(){
+			gui=new GUI([
+				{add:"text",text:"Text"},
+				{add:"button",text:"Button"},
+				{add:"input",text:"Input"},
+				{add:"slider",min:50,max:1249},
+				{add:"image",url:"https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"},
+				{add:"checkbox"},
+				{add:"radio","group":"aa"},
+				{add:"radio","group":"aa"},
+				{add:"radio","group":"aa2"},
+				{add:"radio","group":"aa2"}
+			]);
+			document.body.appendChild(gui.getDomElement());
+		}
+		document.addEventListener("DOMContentLoaded",init);
+	</script>
+	<body>
+	</body>
 </html>
