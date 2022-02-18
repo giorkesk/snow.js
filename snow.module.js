@@ -69,6 +69,12 @@ class GUI_Text{
 	constructor(text=""){
 		this.inner=document.createElement("span");
 		this.inner.innerText=text;
+		this.setText=function(new_text){
+			this.inner.innerText=new_text;
+		}
+		this.getText=function(){
+			return(this.inner.innerText);
+		}
 	}
 }
 
